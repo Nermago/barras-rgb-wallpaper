@@ -83,4 +83,4 @@ El fondo se puede abrir en cualquier app que muestre páginas web como fondo de 
 
 [MIT](LICENSE) — puedes usarlo y modificarlo libremente mencionando al autor.
 
-Hecho con ❤️ por **Abner**.
+Hecho con ❤️ por **Abner** ([@Nermago](https://github.com/Nermago)), creado junto con **[Claude](https://claude.ai)** (IA de Anthropic), que programó el fondo a partir de mis ideas y pruebas.
