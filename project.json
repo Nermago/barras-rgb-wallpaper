@@ -1,0 +1,38 @@
+{
+  "title": "Barras RGB",
+  "description": "Visualizador de música con barras RGB pastel translúcidas. Reacciona a Spotify o cualquier audio del PC. Fondo de imagen o video personalizable.",
+  "file": "index.html",
+  "preview": "thumbnail.png",
+  "type": "web",
+  "tags": ["Music", "Abstract"],
+  "general": {
+    "supportsaudioprocessing": true,
+    "properties": {
+      "bgType": { "order": 1, "text": "Tipo de fondo", "type": "combo", "value": 0, "options": [
+        { "label": "Imagen", "value": 0 },
+        { "label": "Video", "value": 1 },
+        { "label": "Degradado animado", "value": 2 }
+      ] },
+      "imgFile": { "order": 2, "text": "Imagen de fondo", "type": "file", "fileType": "image", "value": "" },
+      "vidFile": { "order": 3, "text": "Video de fondo", "type": "file", "fileType": "video", "value": "" },
+      "videoAudio": { "order": 3, "text": "Audio del video", "type": "bool", "value": false },
+      "videoVolume": { "order": 3, "text": "Volumen del video (%)", "type": "slider", "value": 50, "min": 0, "max": 100 },
+      "dim": { "order": 4, "text": "Oscurecer fondo (%)", "type": "slider", "value": 15, "min": 0, "max": 80 },
+      "blur": { "order": 5, "text": "Desenfoque del fondo", "type": "slider", "value": 0, "min": 0, "max": 20 },
+      "barCount": { "order": 6, "text": "Cantidad de barras", "type": "slider", "value": 96, "min": 16, "max": 200 },
+      "barHeight": { "order": 7, "text": "Altura máxima (% de pantalla)", "type": "slider", "value": 35, "min": 10, "max": 80 },
+      "gap": { "order": 8, "text": "Separación entre barras (%)", "type": "slider", "value": 35, "min": 0, "max": 80 },
+      "opacity": { "order": 9, "text": "Opacidad de las barras (%)", "type": "slider", "value": 55, "min": 10, "max": 100 },
+      "saturation": { "order": 10, "text": "Saturación del color", "type": "slider", "value": 85, "min": 0, "max": 100 },
+      "lightness": { "order": 11, "text": "Claridad del color (más alto = más pastel)", "type": "slider", "value": 78, "min": 40, "max": 95 },
+      "colorSpeed": { "order": 12, "text": "Velocidad del arcoíris", "type": "slider", "value": 25, "min": 0, "max": 100 },
+      "glow": { "order": 13, "text": "Brillo (glow)", "type": "slider", "value": 45, "min": 0, "max": 100 },
+      "sensitivity": { "order": 14, "text": "Sensibilidad al audio", "type": "slider", "value": 100, "min": 20, "max": 300 },
+      "smoothing": { "order": 15, "text": "Suavizado de caída", "type": "slider", "value": 60, "min": 0, "max": 95 },
+      "mirror": { "order": 16, "text": "Modo espejo (graves al centro)", "type": "bool", "value": true },
+      "peaks": { "order": 17, "text": "Mostrar picos que caen", "type": "bool", "value": true },
+      "rounded": { "order": 18, "text": "Puntas redondeadas", "type": "bool", "value": true },
+      "idleWave": { "order": 19, "text": "Onda suave cuando no hay música", "type": "bool", "value": true }
+    }
+  }
+}

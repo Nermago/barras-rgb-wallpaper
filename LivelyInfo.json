@@ -1,0 +1,14 @@
+{
+  "AppVersion": "2.0.0.0",
+  "Title": "Barras RGB",
+  "Thumbnail": "thumbnail.png",
+  "Preview": "",
+  "Desc": "Visualizador de música con barras RGB pastel translúcidas. Reacciona a Spotify o cualquier audio del PC. Fondo de imagen o video personalizable.",
+  "Author": "Abner",
+  "License": "",
+  "Contact": "",
+  "Type": 2,
+  "FileName": "index.html",
+  "Arguments": "",
+  "IsAbsolutePath": false
+}

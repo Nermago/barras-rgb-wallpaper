@@ -1,0 +1,23 @@
+{
+  "bgType": { "type": "dropdown", "value": 0, "text": "Tipo de fondo", "items": ["Imagen", "Video", "Degradado animado"] },
+  "imgFile": { "type": "folderDropdown", "value": "default.svg", "text": "Imagen de fondo", "filter": "*.jpg|*.jpeg|*.png|*.webp|*.gif|*.svg", "folder": "images" },
+  "vidFile": { "type": "folderDropdown", "value": "", "text": "Video de fondo", "filter": "*.mp4|*.webm", "folder": "videos" },
+  "videoAudio": { "type": "checkbox", "value": false, "text": "Audio del video" },
+  "videoVolume": { "type": "slider", "value": 50, "min": 0, "max": 100, "step": 1, "text": "Volumen del video (%)" },
+  "dim": { "type": "slider", "value": 15, "min": 0, "max": 80, "step": 1, "text": "Oscurecer fondo (%)" },
+  "blur": { "type": "slider", "value": 0, "min": 0, "max": 20, "step": 1, "text": "Desenfoque del fondo" },
+  "barCount": { "type": "slider", "value": 96, "min": 16, "max": 200, "step": 2, "text": "Cantidad de barras" },
+  "barHeight": { "type": "slider", "value": 35, "min": 10, "max": 80, "step": 1, "text": "Altura máxima (% de pantalla)" },
+  "gap": { "type": "slider", "value": 35, "min": 0, "max": 80, "step": 1, "text": "Separación entre barras (%)" },
+  "opacity": { "type": "slider", "value": 55, "min": 10, "max": 100, "step": 1, "text": "Opacidad de las barras (%)" },
+  "saturation": { "type": "slider", "value": 85, "min": 0, "max": 100, "step": 1, "text": "Saturación del color" },
+  "lightness": { "type": "slider", "value": 78, "min": 40, "max": 95, "step": 1, "text": "Claridad del color (más alto = más pastel)" },
+  "colorSpeed": { "type": "slider", "value": 25, "min": 0, "max": 100, "step": 1, "text": "Velocidad del arcoíris" },
+  "glow": { "type": "slider", "value": 45, "min": 0, "max": 100, "step": 1, "text": "Brillo (glow)" },
+  "sensitivity": { "type": "slider", "value": 100, "min": 20, "max": 300, "step": 5, "text": "Sensibilidad al audio" },
+  "smoothing": { "type": "slider", "value": 60, "min": 0, "max": 95, "step": 1, "text": "Suavizado de caída" },
+  "mirror": { "type": "checkbox", "value": true, "text": "Modo espejo (graves al centro)" },
+  "peaks": { "type": "checkbox", "value": true, "text": "Mostrar picos que caen" },
+  "rounded": { "type": "checkbox", "value": true, "text": "Puntas redondeadas" },
+  "idleWave": { "type": "checkbox", "value": true, "text": "Onda suave cuando no hay música" }
+}

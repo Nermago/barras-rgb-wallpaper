@@ -1,0 +1,5 @@
+Pon aquí tus capturas de escritorio:
+  escritorio-1.png
+  escritorio-2.png
+El README.md ya las muestra con esos nombres.
+(Win + Shift + S para hacer una captura.)
