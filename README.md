@@ -1,5 +1,7 @@
 ﻿# 🎵 Barras RGB — Fondo de pantalla animado con música
 
+> 🤖 **Hecho con [Claude](https://claude.ai)** (IA de Anthropic): Claude programó este fondo a partir de mis ideas, pruebas y ajustes. — **Abner ([@Nermago](https://github.com/Nermago))**
+
 Fondo de pantalla animado con **barras de música RGB en tonos pastel y translúcidas** en la parte de abajo del escritorio, al estilo de los escritorios de Linux. Las barras **se mueven con la música que suena en tu PC** (Spotify, YouTube, Apple Music, juegos…), y detrás puedes poner **tu propia imagen o video**.
 
 ![Vista previa](thumbnail.png)
@@ -83,4 +85,4 @@ El fondo se puede abrir en cualquier app que muestre páginas web como fondo de 
 
 [MIT](LICENSE) — puedes usarlo y modificarlo libremente mencionando al autor.
 
-Hecho con ❤️ por **Abner** ([@Nermago](https://github.com/Nermago)), creado junto con **[Claude](https://claude.ai)** (IA de Anthropic), que programó el fondo a partir de mis ideas y pruebas.
+Hecho con ❤️ por **Abner** ([@Nermago](https://github.com/Nermago)) junto con **[Claude](https://claude.ai)**.
