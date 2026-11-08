@@ -16,7 +16,7 @@ Fondo de pantalla animado con **barras de música RGB en tonos pastel y translú
 
 ## 🎬 Video de muestra
 
-https://github.com/Nermago/barras-rgb-wallpaper/raw/main/capturas/demo.mp4
+https://github.com/user-attachments/assets/5138946f-fee4-454e-a447-734b7078ae77
 
 > Si el video no se ve arriba, [descárgalo aquí](capturas/demo.mp4).
 
