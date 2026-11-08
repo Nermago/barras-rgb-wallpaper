@@ -61,7 +61,8 @@ const cfg = {
   mirror: true,
   peaks: true,
   rounded: true,
-  idleWave: true
+  idleWave: true,
+  autoGain: true
 };
 
 const imgEl = document.getElementById("bgImg");
@@ -188,14 +189,25 @@ function livelyPropertyListener(name, val) {
 
 // ---------- Audio ----------
 let raw = new Float32Array(128);
-let lastAudio = 0;
+let lastAudio = 0;        // última vez que llegó sonido de verdad (no solo silencio)
+const SOUND_MIN = 0.002;  // por debajo de esto se considera silencio
+
+// Ajuste automático de volumen: recuerda qué tan fuerte llega el audio y escala las barras,
+// para que sigan el ritmo aunque la música suene bajito (por ejemplo, por HDMI o con poco volumen).
+let gainRef = 0.3, lastGainT = 0;
 
 // Lively envía aquí el espectro del audio que suena en el PC (Spotify, YouTube, etc.).
 function livelyAudioListener(arr) {
   if (!arr || !arr.length) return;
   if (raw.length !== arr.length) raw = new Float32Array(arr.length);
-  for (let i = 0; i < arr.length; i++) raw[i] = arr[i];
-  lastAudio = performance.now();
+  let m = 0;
+  for (let i = 0; i < arr.length; i++) { raw[i] = arr[i]; if (arr[i] > m) m = arr[i]; }
+  const now = performance.now();
+  if (m > SOUND_MIN) lastAudio = now;
+  const dt = lastGainT ? Math.min(0.2, (now - lastGainT) / 1000) : 0;
+  lastGainT = now;
+  if (m > gainRef) gainRef += (m - gainRef) * 0.5;               // sube rápido con golpes fuertes
+  else gainRef = Math.max(0.02, gainRef * Math.pow(0.85, dt));   // baja despacio (~15% por segundo)
 }
 
 // Wallpaper Engine: 128 valores (0-63 canal izquierdo, 64-127 derecho). Los juntamos en 64.
@@ -273,7 +285,8 @@ function sampleBar(i, n) {
   for (let k = a; k < b && k < len; k++) s += raw[k];
   s /= (b - a);
   const boost = 1 + (i / n) * 1.6;
-  return Math.min(1, s * boost * cfg.sensitivity / 100);
+  const gain = (cfg.autoGain && !demoMode) ? 0.9 / gainRef : 1;
+  return Math.min(1, s * boost * gain * cfg.sensitivity / 100);
 }
 
 function barPath(x, y, w, h, r) {
@@ -313,8 +326,8 @@ function frame(now) {
     } else {
       target = sampleBar(i, n);
     }
-    if (silent) target = 0;
-    if (cfg.idleWave) target = Math.max(target, 0.025 + 0.02 * Math.sin(t * 1.5 + i * 0.25));
+    // La onda suave solo aparece cuando no suena nada; con música, las barras siguen el audio.
+    if (silent) target = cfg.idleWave ? 0.025 + 0.02 * Math.sin(t * 1.5 + i * 0.25) : 0;
 
     cur[i] += (target - cur[i]) * (target > cur[i] ? 0.55 : decay);
 

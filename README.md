@@ -72,10 +72,11 @@ El fondo se puede abrir en cualquier app que muestre páginas web como fondo de 
 | **Picos que caen** | Rayitas encima de cada barra que caen despacio |
 | **Puntas redondeadas** | Barras con la punta redonda o recta |
 | **Onda suave sin música** | Una onda leve cuando no suena nada |
+| **Ajuste automático de volumen** | Escala las barras según qué tan fuerte llega el audio, para que sigan el ritmo aunque suene bajito (recomendado) |
 
 ## ❓ Problemas comunes
 
-- **Las barras no se mueven:** asegúrate de que la música suene por los altavoces/audífonos predeterminados de Windows y sube la **Sensibilidad al audio**.
+- **Las barras no se mueven o solo hacen una onda:** el fondo no está recibiendo audio. Asegúrate de que la música suene por el dispositivo **predeterminado** de Windows y deja activado el **Ajuste automático de volumen**. Si pasó al encender la PC, cierra Lively desde la bandeja (junto al reloj) y vuelve a abrirlo.
 - **Mi video no se ve o va lento:** usa formato `.mp4` (H.264) o `.webm`. Los videos de celular suelen estar en HEVC/H.265, que Windows no siempre puede reproducir en fondos web; conviértelos a H.264 (por ejemplo con HandBrake, gratis). Videos 4K a 60 fps también pueden ir pesados en PCs modestas.
 - **Consume mucha batería/CPU:** baja la **Cantidad de barras** o el **Brillo (glow)**.
 

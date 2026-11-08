@@ -19,5 +19,6 @@
   "mirror": { "type": "checkbox", "value": true, "text": "Modo espejo (graves al centro)" },
   "peaks": { "type": "checkbox", "value": true, "text": "Mostrar picos que caen" },
   "rounded": { "type": "checkbox", "value": true, "text": "Puntas redondeadas" },
-  "idleWave": { "type": "checkbox", "value": true, "text": "Onda suave cuando no hay música" }
+  "idleWave": { "type": "checkbox", "value": true, "text": "Onda suave cuando no hay música" },
+  "autoGain": { "type": "checkbox", "value": true, "text": "Ajuste automático de volumen (recomendado)" }
 }

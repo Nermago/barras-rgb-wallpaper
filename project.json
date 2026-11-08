@@ -32,7 +32,8 @@
       "mirror": { "order": 16, "text": "Modo espejo (graves al centro)", "type": "bool", "value": true },
       "peaks": { "order": 17, "text": "Mostrar picos que caen", "type": "bool", "value": true },
       "rounded": { "order": 18, "text": "Puntas redondeadas", "type": "bool", "value": true },
-      "idleWave": { "order": 19, "text": "Onda suave cuando no hay música", "type": "bool", "value": true }
+      "idleWave": { "order": 19, "text": "Onda suave cuando no hay música", "type": "bool", "value": true },
+      "autoGain": { "order": 20, "text": "Ajuste automático de volumen (recomendado)", "type": "bool", "value": true }
     }
   }
 }
