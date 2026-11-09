@@ -77,6 +77,7 @@ El fondo se puede abrir en cualquier app que muestre páginas web como fondo de 
 ## ❓ Problemas comunes
 
 - **Las barras no se mueven o solo hacen una onda:** el fondo no está recibiendo audio. Asegúrate de que la música suene por el dispositivo **predeterminado** de Windows y deja activado el **Ajuste automático de volumen**. Si pasó al encender la PC, cierra Lively desde la bandeja (junto al reloj) y vuelve a abrirlo.
+- **Se queda en la pantalla de carga de Lively (el alien):** actualiza a la versión 1.1.1 o más nueva. Desde esa versión las barras se dibujan con el procesador, así que el fondo carga aunque el driver de la gráfica (sobre todo Intel) haya fallado. Si sigue pasando, reinicia la PC.
 - **Mi video no se ve o va lento:** usa formato `.mp4` (H.264) o `.webm`. Los videos de celular suelen estar en HEVC/H.265, que Windows no siempre puede reproducir en fondos web; conviértelos a H.264 (por ejemplo con HandBrake, gratis). Videos 4K a 60 fps también pueden ir pesados en PCs modestas.
 - **Consume mucha batería/CPU:** baja la **Cantidad de barras** o el **Brillo (glow)**.
 

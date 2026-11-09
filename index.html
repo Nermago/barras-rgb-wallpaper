@@ -71,9 +71,11 @@ const bgEl = document.getElementById("bg");
 const dimEl = document.getElementById("dim");
 const noticeEl = document.getElementById("notice");
 const canvas = document.getElementById("viz");
-const ctx = canvas.getContext("2d");
+// Las barras se dibujan con el procesador (willReadFrequently): el modo acelerado por la gráfica
+// puede tumbar el motor web en algunas gráficas Intel después de un fallo del driver.
+const ctx = canvas.getContext("2d", { willReadFrequently: true });
 const glowCanvas = document.getElementById("glow");
-const gctx = glowCanvas.getContext("2d");
+const gctx = glowCanvas.getContext("2d", { willReadFrequently: true });
 
 // Lively usa WebView2. Wallpaper Engine expone wallpaperRegisterAudioListener.
 const inLively = !!(window.chrome && window.chrome.webview);
